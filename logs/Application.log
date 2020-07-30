@@ -1,0 +1,575 @@
+2020-07-30 14:52:25 DEBUG ExcelReader1:33 - Workbook has 4 Sheets : 
+2020-07-30 14:52:25 DEBUG TestBaseReports:43 - TestBaseReports resources() start 
+2020-07-30 14:52:25 DEBUG TestBaseReports:46 - The User_dir D:\Projects\TestSecurity
+2020-07-30 14:52:25 DEBUG TestBaseReports:61 - TestBaseReports resources() exit 
+2020-07-30 14:52:25 DEBUG ARoleTest:27 - 0 ====== Report ARoleTest =======================================
+2020-07-30 14:52:25 DEBUG TestBaseReports:17 - === TestUtilReports getData ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:28 - === TestUtilReports getData 1============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 1 4 == R_BasicA
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 2 5 == R_BasicA-Adt
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 3 6 == R_BasicA-DbtA-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 4 7 == R_BasicA-ExpA
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 5 8 == R_BasicA-ExpA-DbtA-Adt-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 6 10 == R_BasicA-ExpB
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 7 11 == R_BasicA-ExpB-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 8 12 == R_BasicA-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 9 13 == R_BasicA-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 10 14 == R_BasicB-ExpB
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 11 16 == R_BasicB-ExpB-DbtA
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 12 17 == R_BasicB-ExpB-DbtA-Adt
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 13 18 == R_BasicB-ExpB-DbtA-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 14 19 == R_BasicB-ExpB-DbtA-Fin-Adt
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 15 20 == R_BasicB-ExpB-DbtA-Fin-Adt-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 16 22 == R_BasicB-ExpB-DbtA-Fin-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 17 23 == R_BasicB-ExpB-DbtB
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 18 24 == R_BasicB-ExpB-DbtB-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 19 25 == R_BasicB-ExpB-DbtB-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 20 26 == R_BasicB-ExpB-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 21 27 == R_AllReports
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 22 29 == W_BasicA
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 23 30 == W_BasicA-Adt
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 24 31 == W_BasicA-DbtA-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 25 32 == W_BasicA-ExpA
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 26 33 == W_BasicA-ExpA-DbtA-Adt-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 27 35 == W_BasicA-ExpB
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 28 36 == W_BasicA-ExpB-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 29 37 == W_BasicA-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 30 38 == W_BasicA-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 31 39 == W_BasicB-ExpB
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 32 41 == W_BasicB-ExpB-DbtA
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 33 42 == W_BasicB-ExpB-DbtA-Adt
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 34 43 == W_BasicB-ExpB-DbtA-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 35 44 == W_BasicB-ExpB-DbtA-Fin-Adt
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 36 45 == W_BasicB-ExpB-DbtA-Fin-Adt-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 37 47 == W_BasicB-ExpB-DbtA-Fin-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 38 48 == W_BasicB-ExpB-DbtB
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 39 49 == W_BasicB-ExpB-DbtB-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 40 50 == W_BasicB-ExpB-DbtB-Fin
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 41 51 == W_BasicB-ExpB-Mil
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- 
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:38 - 42 52 == W_AllReports
+2020-07-30 14:52:25 DEBUG TestBaseReports:49 - XXX Dashboard & All Reports: Trip & Document Status -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:59 - XXX Dashboard & All Reports: Document Details -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:69 - XXX Dashboard: Traveler & User Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:79 - XXX Dashboard & All Reports: Audit Trail -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:90 - XXX Dashboard: Tickets -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:100 - XXX Dashboard & All Reports (except PERSTEMO): Military Information -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:110 - XXX Dashboard: Expenses -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:119 - XXX Dashboard & All Reports: Lodging -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:129 - XXX Dashboard: Debt Management -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:139 - XXX Dashboard: Transaction Monitoring -- x
+2020-07-30 14:52:25 DEBUG TestBaseReports:149 - === Role Permision List ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:32 - === TestUtilReports loop ============================
+2020-07-30 14:52:25 DEBUG ARoleTest:41 - === runcBrofeClass ============================
+2020-07-30 14:52:25 DEBUG ARoleTest:27 - 0 ====== Report ARoleTest =======================================
+2020-07-30 14:52:25 DEBUG ARoleTest:43 - === calling setup ============================
+2020-07-30 14:52:25 DEBUG TestBaseReports:66 - TestBaseReports setup()  ARoleTest
+2020-07-30 14:52:29 DEBUG TestBaseReports:76 - Chrome browser launched
