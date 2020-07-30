@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTestsSuite">
+<test name="My Selenium TestNG Test"  preserve-order="true">
+
+    <classes>
+        <!--
+        <class name="obieeReportsTests.AuditTrailGOVCCandEFT"/>
+
+             <class name="obieeReportsTests.AuditTrailPersonData"/>
+              <class name="obieeReportsTests.RoutingStatus"/>
+             -->
+        <class name="obieeReportsTests.ARoleTest"/>
+ 
+
+
+
+
+
+
+
+
+
+
+    </classes>
+</test>
+</suite>
