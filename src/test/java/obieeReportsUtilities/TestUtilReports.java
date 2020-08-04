@@ -148,6 +148,7 @@ public class TestUtilReports extends TestBaseReports {
 			}
 			log.debug("=== Role Permision List ============================");
 			rolePermissionList.add(aRolePermission);
+
 		}
 
 		return rolePermissionList.toArray();

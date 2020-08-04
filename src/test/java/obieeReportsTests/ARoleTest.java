@@ -38,45 +38,20 @@ public class ARoleTest extends TestBaseReports {
 		//setRoleInDB(rolePermission.getRoleName());
 
 
-		log.debug("=== runcBrofeClass ============================");
+		log.debug("=== run before class  =======" + rolePermission.getRoleName() );
 		runBeforeClass();
 		log.debug("=== calling setup ============================");
 		super.setUp(rolePermission);
 
-		/*
-		WebElement signedIn = driver.findElement((By.xpath("//*[text() = 'gary.rather']")));
-        signedIn.click();
-        WebElement myAccount = driver.findElement((By.xpath("//*[text() = 'My Account']")));
-        myAccount.click();
-		WebElement appRoles = driver.findElement((By.xpath("//*[text() = 'Application Roles']")));
-		appRoles.click();
-		//WebElement authUser = driver.findElement((By.xpath("//[starts-with(//*[text() = 'Authenticated User']")));
-		String rRoleText = null;
-		String wRoleText = null;
 
-		try {
-			WebElement rRole = driver.findElement(By.xpath("//div[text()[contains(.,'R_')]]"));
-			rRoleText = rRole.getText();
-			log.debug("R Found the Role is " + rRoleText + " Should Match " + rolePermission.getRoleName());
-		}catch (Exception e){}
-
-		try {
-			WebElement wRole = driver.findElement(By.xpath("//div[text()[contains(.,'W_')]]"));
-			wRoleText  = wRole.getText();
-			log.debug("W Found the Role is " + wRoleText + " Should Match " + rolePermission.getRoleName());
-		} catch (Exception e){ }
-
-
-		//String xRoleTxt1 = xRole1.getText();
-*/
-
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		String theTestValue = this.getTheTest();
 		log.debug("Report ARoleTest: " + rolePermission.getRoleName());
 		//log.debug("Report ARoleTest: " + config.getProperty("reportRequested"));
 		//log.debug("Going into Traveler & User Information section");
 
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		wr.openTable(rolePermission.getRoleName(),roleCount++);
+		//driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		wr.openTable(rolePermission.getRoleName(),roleCount++,rolePermission.getUserName());
 		List<WebElement> theEle0 = driver.findElements(By.xpath("//*[text() = 'Trip & Document Status']"));
 		log.debug("List of Trip & Document Status " + theEle0.size());
 		wr.writeRow("Trip & Document Status", rolePermission.isTripDocumentStatus(), theEle0.size(), "");
@@ -128,37 +103,5 @@ public class ARoleTest extends TestBaseReports {
 		log.debug("Report ARoleTest Complete ##########################");
 	}
 
-	public void setRoleInDB(String rolename) {
-		String myConnectionURL = "jdbc:oracle:thin:@10.1.10.201:1521:ORCLPDB";
-		String dbUser = "dtsdm_users";
-		String dbPassword = "cL3ar#12";
-		String sql = "update dtsdm_users.USER_LOCAL_GRP_MEMBR  set GRP_NAME = ? \n" +
-				"where GRP_MEMBER = 'gary.rather' \n" +
-				" and (GRP_NAME like 'R%' or GRP_NAME like 'W%')";
-		Connection conn = null;
-		try {
 
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-
-			conn = DriverManager.getConnection(myConnectionURL, dbUser, dbPassword);
-			PreparedStatement stmt = conn.prepareStatement(sql);
-
-			stmt.setString(1, rolename);
-
-			int cnt = stmt.executeUpdate();
-			if (cnt == 1) log.debug("Updated DB for Role Successfully " + rolename);
-
-		} catch (Exception e) {
-			log.error("SQL FAILED "+ sql);
-			log.error("SQL EXCEPTION: ", e);
-		} finally {
-			try {
-				if (conn != null) {
-					conn.close();
-				}
-			} catch (SQLException e2) {
-				// Can't really do anything
-			}
-		}
-	}
 }

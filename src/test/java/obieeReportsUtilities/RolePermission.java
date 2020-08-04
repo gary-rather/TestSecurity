@@ -2,6 +2,8 @@ package obieeReportsUtilities;
 
 public class RolePermission {
     String RoleName = null;
+    String userName = null;
+
     boolean TripDocumentStatus = false;
     boolean DocumentDetails = false;
     boolean TravelerUserInformation = false;
@@ -13,12 +15,21 @@ public class RolePermission {
     boolean DebtManagement = false;
     boolean TransactionMonitoring = false;
 
+
     public String getRoleName() {
         return RoleName;
     }
 
     public void setRoleName(String roleName) {
         RoleName = roleName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public boolean isTripDocumentStatus() {

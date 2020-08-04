@@ -65,8 +65,8 @@ public class TestBaseReports {
 	public void setUp(RolePermission rolePermission)  {
 		log.debug("TestBaseReports setup()  " + theTest);
 
-
-		if (driver == null) {
+        driver= null;
+        if (driver == null) {
 			switch (config.getProperty("browser")) {
 				case "chrome":
 					try {
@@ -96,7 +96,7 @@ public class TestBaseReports {
 
 					break;
 			}
-
+		}
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			driver.get(config.getProperty("testingurl"));
 
@@ -128,7 +128,7 @@ public class TestBaseReports {
 			wait = new WebDriverWait(driver, 10);
 			log.debug("TestBaseReorts setup() start");
 
-		}
+
 
 	}
 
@@ -216,11 +216,11 @@ public class TestBaseReports {
 		this.theTest = theTest;
 	}
 
-	public String checkTheRole(RolePermission rolePermission) {
+	public String checkTheRole(RolePermission rolePermission,String userName) {
 
         String desiredRole = rolePermission.getRoleName().trim();
         String actualRoleName = null;
-		WebElement signedIn = driver.findElement((By.xpath("//*[text() = '"+desiredRole+"']")));
+		WebElement signedIn = driver.findElement((By.xpath("//*[text() = '"+userName+"']")));
 		signedIn.click();
 		WebElement myAccount = driver.findElement((By.xpath("//*[text() = 'My Account']")));
 		myAccount.click();
@@ -245,30 +245,35 @@ public class TestBaseReports {
 
 		// This will signIn to account in ThisCase the roleName being tested
 		String perRoleName = rolePermission.getRoleName();
+
+		String userName = config.getProperty(perRoleName);
+        rolePermission.setUserName(userName);
+
 		String actualRoleName = null;
 
 		int loop = 0;
-		while (!perRoleName.equals(actualRoleName)){
-			loop++;
+		//while (!perRoleName.equals(actualRoleName)){
+			//loop++;
 
 			// Login to the user which is the same as RoleName
 			// First Login
-			driver.findElement(By.xpath("//*[@id='idUser']")).sendKeys(perRoleName);
+			driver.findElement(By.xpath("//*[@id='idUser']")).sendKeys(userName.trim());
+
 			//driver.findElement(By.xpath("//*[@id='idUser']")).sendKeys(config.getProperty("userID"));
-			driver.findElement(By.xpath("//*[@id=\'idPassword\']")).sendKeys(config.getProperty("password"));
+			driver.findElement(By.xpath("//*[@id=\'idPassword\']")).sendKeys(config.getProperty("password").trim());
 			driver.findElement(By.xpath("//*[@id=\'btn_login\']")).click();
+            log.debug("Logging in as --"+ userName  + "--");
+			//actualRoleName = checkTheRole(rolePermission,userName);
+			//if (actualRoleName == null) {
+			//	driver.findElement(By.xpath("//*[@id=\'logout\']")).click();
+			//	log.debug(loop + " NOT THE CORRECT USER " + perRoleName + " != " + actualRoleName);
+			//	try {
+			//		Thread.sleep(20000);
+			//	}catch (Exception e){}
+			//}
 
-			actualRoleName = checkTheRole(rolePermission);
-			if (actualRoleName == null) {
-				driver.findElement(By.xpath("//*[@id=\'logout\']")).click();
-				log.debug(loop + " NOT THE CORRECT USER " + perRoleName + " != " + actualRoleName);
-				try {
-					Thread.sleep(20000);
-				}catch (Exception e){}
-			}
-
-			if (loop > 10)break;
-		}
+			//if (loop > 10)break;
+		//}
 
 
 		return actualRoleName;

@@ -99,10 +99,10 @@ public class WriteResults {
         printWriter.println("<div id=\"divyellow\">" + text + "</div>");
     }
 
-    public void openTable(String role, int roleCount) {
+    public void openTable(String role, int roleCount,String userName) {
        String tableHtml = "<table id=\"tbl\">\n" +
                "  <tr>\n" +
-               "\t<th width='500' >"+roleCount +" Dashboards for: "+role+ "</th>\n" +
+               "\t<th width='500' >"+roleCount +" Dashboards for: "+role+ " -- " + userName +"</th>\n" +
                "    <th  width='100'>Expected</th>\n" +
                "\t<th  width='100'>Actual</th>\n" +
                "    <th>Notes</th>\n" +
