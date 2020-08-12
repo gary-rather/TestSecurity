@@ -3,9 +3,12 @@ package obieeReportsBase;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import obieeReportsUtilities.ReportList;
 import obieeReportsUtilities.RolePermission;
 import obieeReportsUtilities.WriteResults;
 import org.apache.log4j.Logger;
@@ -14,6 +17,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -37,6 +42,7 @@ public class TestBaseReports {
 	public String theTest = null;
 	public WriteResults wr = null;
 	public int roleCount = 1;
+    public ReportList reportList = new ReportList();
 
 	@BeforeSuite
 	public void resources()  {
@@ -71,9 +77,10 @@ public class TestBaseReports {
 				case "chrome":
 					try {
 						System.setProperty("webdriver.chrome.driver", user_dir + "/src/test/resources/SeleniumWebDrivers/chromedriver.exe");
+
 						driver = new ChromeDriver();
 						driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-						log.debug("Chrome browser launched");
+						//log.debug("Chrome browser launched");
 					} catch (Exception e) {
 						System.out.println("Error caught");
 						log.error("Error ", e);
@@ -85,14 +92,14 @@ public class TestBaseReports {
 
 					System.setProperty("webdriver.edge.driver", user_dir + "/src/test/resources/SeleniumWebDrivers/msedgedriver.exe");
 					driver = new EdgeDriver();
-					log.debug("Edge browser launched");
+					//log.debug("Edge browser launched");
 
 					break;
 				case "firefox":
 
 					System.setProperty("webdriver.gecko.driver", user_dir + "/src/test/resources/SeleniumWebDrivers/geckodriver.exe");
 					driver = new FirefoxDriver();
-					log.debug("Firefox browser launched");
+					//log.debug("Firefox browser launched");
 
 					break;
 			}
@@ -100,16 +107,12 @@ public class TestBaseReports {
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			driver.get(config.getProperty("testingurl"));
 
-			log.debug("Navigated to " + config.getProperty("testingurl"));
+			//log.debug("Navigated to " + config.getProperty("testingurl"));
 
 			driver.manage().window().maximize();
 
-			//driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-			//driver.findElement(By.xpath("//*[@id='idUser']")).sendKeys(config.getProperty("userID"));
-			//.findElement(By.xpath("//*[@id=\'idPassword\']")).sendKeys(config.getProperty("password"));
-			//driver.findElement(By.xpath("//*[@id=\'btn_login\']")).click();
 			String actualRoleName = signIn(rolePermission);
-			log.debug("Logging in OBIEE " + theTest + " theRole " + actualRoleName + " deisred Role Name " + rolePermission.getRoleName());
+			log.debug("Logging in OBIEE " + "User - "+ rolePermission.getUserName() + "  Role - " + rolePermission.getRoleName());
 
 			//String theRoleByHtml = checkTheRole(rolePermission);
 
@@ -119,14 +122,12 @@ public class TestBaseReports {
 			WebElement dtshome = driver.findElement(By.xpath("//*[text() = 'DTS Reports Home']"));
 
 			driver.findElement(By.xpath("//*[text() = 'DTS Reports Home']")).click();
-			log.debug("Inside OBIEE");
-
 
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),
 					TimeUnit.SECONDS);
 
 			wait = new WebDriverWait(driver, 10);
-			log.debug("TestBaseReorts setup() start");
+			//log.debug("TestBaseReorts setup() start");
 
 
 
@@ -243,40 +244,21 @@ public class TestBaseReports {
 
 	public String  signIn(RolePermission rolePermission){
 
-		// This will signIn to account in ThisCase the roleName being tested
+		// This will signIn to account in
 		String perRoleName = rolePermission.getRoleName();
 
+		// Lookup the userName from config
 		String userName = config.getProperty(perRoleName);
-        rolePermission.setUserName(userName);
 
-		String actualRoleName = null;
+		rolePermission.setUserName(userName);
 
-		int loop = 0;
-		//while (!perRoleName.equals(actualRoleName)){
-			//loop++;
-
-			// Login to the user which is the same as RoleName
-			// First Login
-			driver.findElement(By.xpath("//*[@id='idUser']")).sendKeys(userName.trim());
-
-			//driver.findElement(By.xpath("//*[@id='idUser']")).sendKeys(config.getProperty("userID"));
-			driver.findElement(By.xpath("//*[@id=\'idPassword\']")).sendKeys(config.getProperty("password").trim());
-			driver.findElement(By.xpath("//*[@id=\'btn_login\']")).click();
-            log.debug("Logging in as --"+ userName  + "--");
-			//actualRoleName = checkTheRole(rolePermission,userName);
-			//if (actualRoleName == null) {
-			//	driver.findElement(By.xpath("//*[@id=\'logout\']")).click();
-			//	log.debug(loop + " NOT THE CORRECT USER " + perRoleName + " != " + actualRoleName);
-			//	try {
-			//		Thread.sleep(20000);
-			//	}catch (Exception e){}
-			//}
-
-			//if (loop > 10)break;
-		//}
+		// First Login
+		driver.findElement(By.xpath("//*[@id='idUser']")).sendKeys(userName.trim());
+		driver.findElement(By.xpath("//*[@id=\'idPassword\']")).sendKeys(config.getProperty("password").trim());
+		driver.findElement(By.xpath("//*[@id=\'btn_login\']")).click();
 
 
-		return actualRoleName;
+		return perRoleName;
 
 	}
 

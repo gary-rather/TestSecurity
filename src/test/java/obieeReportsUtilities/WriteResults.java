@@ -54,7 +54,34 @@ public class WriteResults {
         if (expectedCount == 1 && actual > 1) notes = "DUPLICATE";
         if (expectedCount == 0 && actual > 0) notes = "SHOULD NOT SHOW";
 
-        String rowHtml = "<TR><TD>" + name + "</TD>"+ "<TD>" + visible + "</TD>" + "<TD  bgcolor='"+ color +"'>" + result + "</TD>"+ "<TD>" + notes + "</TD></TR>";
+        String rowHtml = "<TR><TD colspan='2'>" + name + "</TD>"+ "<TD>" + visible + "</TD>" + "<TD  bgcolor='"+ color +"'>" + result + "</TD>"+ "<TD>" + notes + "</TD></TR>";
+        printWriter.println(rowHtml);
+        printWriter.flush();
+    }
+    public void writeSectionRow(String name){
+        int expectedCount = 0;
+        String result = "";
+        String color = "#00FF00";
+
+        String rowHtml = "<TR bgcolor='eeeeee'><TD>--</TD><TD>" + name + "</TD><TD>--</TD><TD>--</TD></TR>";
+        printWriter.println(rowHtml);
+        printWriter.flush();
+    }
+    public void writeSubRow(String name,boolean visible, int actual, String notes){
+        int expectedCount = 0;
+        String result = "";
+        String color = "#00FF00";
+        if (visible) expectedCount = 1;
+        if (expectedCount == actual) result = "PASS";
+        if (expectedCount != actual) {
+            result = "FAIL";
+            color = "#FF0000";
+        }
+        if (expectedCount == 1 && actual == 0) notes = "MISSING";
+        if (expectedCount == 1 && actual > 1) notes = "DUPLICATE";
+        if (expectedCount == 0 && actual > 0) notes = "SHOULD NOT SHOW";
+
+        String rowHtml = "<TR><TD></TD><TD>" + name + "</TD>"+ "<TD>" + visible + "</TD>" + "<TD  bgcolor='"+ color +"'>" + result + "</TD>"+ "<TD>" + notes + "</TD></TR>";
         printWriter.println(rowHtml);
         printWriter.flush();
     }
@@ -102,10 +129,10 @@ public class WriteResults {
     public void openTable(String role, int roleCount,String userName) {
        String tableHtml = "<table id=\"tbl\">\n" +
                "  <tr>\n" +
-               "\t<th width='500' >"+roleCount +" Dashboards for: "+role+ " -- " + userName +"</th>\n" +
-               "    <th  width='100'>Expected</th>\n" +
+               "\t<th width='50' >"+roleCount +"</th><th> "+role+ " -- " + userName +"</th>\n" +
+               "    <th width='100' >Expected</th>\n" +
                "\t<th  width='100'>Actual</th>\n" +
-               "    <th>Notes</th>\n" +
+               "    <th width='300'>Notes</th>\n" +
                "  </tr>";
        printWriter.println(tableHtml);
 
