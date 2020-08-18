@@ -287,6 +287,8 @@ public class TestUtilReports extends TestBaseReports {
 
 			}
 			//log.debug("=== Role Permision List ============================");
+			String sss = aRolePermission.getRoleName();
+			//if (sss.contains("R_"))
 			rolePermissionList.add(aRolePermission);
 
 		}

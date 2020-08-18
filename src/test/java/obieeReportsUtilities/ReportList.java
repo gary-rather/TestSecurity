@@ -16,8 +16,8 @@ public class ReportList {
         theReports.add( new Report("report06","Document Details","Constructed Travel","Display the Constructed Travel report"));
         theReports.add( new Report("report07","Document Details","Adjustments","Display the Adjustments report"));
 
-        theReports.add( new Report("report08","Traveler & User Information","Complete Traveler","Display the Constructed Travel report"));
-        theReports.add( new Report("report09","Traveler & User Information","Separation of Duties","Display the Adjustments report"));
+        theReports.add( new Report("report08","Traveler & User Information","Complete Traveler","Display the Complete Traveler report"));
+        theReports.add( new Report("report09","Traveler & User Information","Separation of Duties","Display the Separation of Duty report"));
         theReports.add( new Report("report10","Audit Trail","Audit Trail GOVCC & EFT Data","Display the Audit Trail - GOVCC & EFT Accounts report"));
         theReports.add( new Report("report11","Audit Trail","Audit Trail User Data","Display the Audit Trail - User Data report"));
         theReports.add( new Report("report12","Audit Trail","Audit Trail Traveler Data","Audit Trail - Person Data"));
@@ -47,14 +47,14 @@ public class ReportList {
         theReports.add( new Report("report32","Lodging","Government Lodging Programs Unavailability","Display the Government Lodging Programs Unavailability report"));
 
         theReports.add( new Report("report33","Debt Management","Debt Management Summary","Display the Debt Management Summary Report"));
-        theReports.add( new Report("report34","Debt Management","Debt Management Detail","Display the Debt Management History report"));
+        theReports.add( new Report("report34","Debt Management","Debt Management Detail","Display the Debt Management Detail report"));
         theReports.add( new Report("report35","Debt Management","Debts with Offsets and Collections","Display the Debts with Offsets and Collections Report"));
         theReports.add( new Report("report36","Debt Management","Monthly Debt Summary","Display the Debt Summary by Month Report"));
 
-        theReports.add( new Report("report37","Transaction Monitoring","\"What's Out\": Totals by System","Display the \"What's Out\": Totals by System report"));
-        theReports.add( new Report("report38","Transaction Monitoring","\"What's Out\": Details","Display the \"What's Out\": Transaction Details report"));
-        theReports.add( new Report("report39","Transaction Monitoring","Posack Delinquency","Display the Posack Delinquency report"));
-        theReports.add( new Report("report40","Transaction Monitoring","Partner System Posack Delinquency","Display the Partner System Posack Delinquency"));
+        theReports.add( new Report("report37","Transaction Monitoring","What's Out - Totals by System","Display the What's Out - Totals by System report"));
+        theReports.add( new Report("report38","Transaction Monitoring","What's Out - Details","Display the What's Out - Transaction Details"));
+        theReports.add( new Report("report39","Transaction Monitoring","Posack Delinquency","Display the Pos Ack Delinquency report"));
+        theReports.add( new Report("report40","Transaction Monitoring","Partner System Posack Delinquency","Display the Partner System Pos Ack Delinquency"));
 
     }
 

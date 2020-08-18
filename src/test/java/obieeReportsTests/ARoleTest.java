@@ -8,7 +8,9 @@ import obieeReportsUtilities.TestUtilReports;
 import obieeReportsUtilities.WriteResults;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +23,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ARoleTest extends TestBaseReports {
     public static Logger log = Logger.getLogger("ARoleTest");
-
+    WebElement tdsLink = null;
+    WebElement retHome = null;
 
     @BeforeClass
     public void runBeforeClass() {
@@ -43,10 +46,12 @@ public class ARoleTest extends TestBaseReports {
         runBeforeClass();
 
         super.setUp(rolePermission);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         String userName = rolePermission.getUserName().trim();
+
 /*
-		if (!"RTEST3".equals(userName)){
+		if (!"RTEST11".equals(userName)){
 			log.debug("SKIP " + userName);
 			driver.findElement(By.xpath("//*[@id=\'logout\']")).click();
 			driver.close();
@@ -59,67 +64,59 @@ public class ARoleTest extends TestBaseReports {
         // Open the table for this loop
         wr.openTable(rolePermission.getRoleName(), roleCount++, rolePermission.getUserName());
 
-		/*
-		// Find the list in Dashboards pull down
-		WebElement thePulldown = driver.findElement(By.xpath("//span[text() = 'Dashboards']"));
-		log.debug("Dashboard is " + thePulldown.getTagName() );
-		thePulldown.click();
-		List<WebElement> dtsReps = driver.findElements(By.xpath("//*[contains(text(),' DTS') ]"));
-
-		for (WebElement aPull : dtsReps) {
-			log.debug("There are Dashboards pull down " + aPull.getTagName() + " " + aPull.getText());
-		}
-*/
-/*		// Find all the dashbard links
-		List<WebElement> theDshLinks = driver.findElements(By.xpath("//span[contains(text(),' Dashboard') ]"));
-		for (WebElement aLink : theDshLinks) {
-			log.debug("There are Dashboards " + aLink.getTagName() + " " + aLink.getText());
-
-			aLink.click();
-			if ()
-			log.debug("");
-
-		}
-*/
 
         try {
+            tdsLink = null;
+            retHome = null;
+
             List<WebElement> theEle0 = driver.findElements(By.xpath("//h2[text() = 'Trip & Document Status']"));
             //log.debug("List of Trip & Document Status " + theEle0.size());
             wr.writeRow("Trip & Document Status", rolePermission.isTripDocumentStatus(), theEle0.size(), "");
             findReportElements(rolePermission, "Trip & Document Status");
             if (rolePermission.isTripDocumentStatus()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Document & Trip Status Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Document & Trip Status Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Trip & Document Status");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Trip & Document Status section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Trip & Document Status section ", e);
+            wr.writeSubRowException("Trip & Document Status Dashboard", "Exception ");
         }
 
 
         try {
+            tdsLink = null;
+            retHome = null;
             List<WebElement> theEle1 = driver.findElements(By.xpath("//h2[text() = 'Document Details']"));
             //log.debug("List of Document Details " + theEle1.size());
             wr.writeRow("Document Details", rolePermission.isTripDocumentStatus(), theEle1.size(), "");
             findReportElements(rolePermission, "Document Details");
             if (rolePermission.isTripDocumentStatus()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Document Details Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Document Details Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
+
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Document Details");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Document Details section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Document Details section ", e);
+            wr.writeSubRowException("Document Details Dashboard", "Exception ");
         }
 
         try {
+            tdsLink = null;
+            retHome = null;
             String rolename = rolePermission.getRoleName();
             List<WebElement> theEle2 = driver.findElements(By.xpath("//h2[text() = 'Traveler & User Information']"));
             //log.debug("List of Traveler & User Information " + theEle2.size());
@@ -130,144 +127,185 @@ public class ARoleTest extends TestBaseReports {
             // BacisB and Adt
             // Using spread sheet for this
             if (rolename.contains("BasicB") && !rolename.contains("Adt")) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Traveler & User Information Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Traveler & User Information Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Traveler & User Information");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Traveler & User Information section");
             }
             else if (rolename.contains("BasicB") && rolename.contains("Adt")) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Traveler & User Information Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Traveler & User Information Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
+
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Traveler & User Information");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Traveler & User Information section");
             }
             else if (!rolename.contains("BasicB") && rolename.contains("Adt")) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Audit Trail Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Audit Trail Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Audit Trail");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Traveler & User Information section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Traveler & User Information section ", e);
+            wr.writeSubRowException("Traveler & User Information", "Exception ");
         }
 
         try {
+            tdsLink = null;
+            retHome = null;
             List<WebElement> theEle3 = driver.findElements(By.xpath("//h2[text() = 'Tickets']"));
             //log.debug("List of Tickets " + theEle3.size());
             wr.writeRow("Tickets", rolePermission.isTickets(), theEle3.size(), "");
             findReportElements(rolePermission, "Tickets");
             if (rolePermission.isTickets()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Tickets Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Tickets Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Tickets");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Tickets section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Tickets section ", e);
+            wr.writeSubRowException("Tickets Dashboard", "Exception ");
         }
 
         try {
-
+            tdsLink = null;
+            retHome = null;
             List<WebElement> theEle4 = driver.findElements(By.xpath("//h2[text() = 'Military Information']"));
             //log.debug("List of Military Information " + theEle4.size());
             wr.writeRow("Military Information", rolePermission.isMilitaryInformation(), theEle4.size(), "");
             findReportElements(rolePermission, "Military Information");
             if (rolePermission.isMilitaryInformation()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Military Information Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Military Information Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Military Information");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Military Information section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Military Information Status section ", e);
+            wr.writeSubRowException("Military Information Dashboard", "Exception ");
         }
 
         try {
+            tdsLink = null;
+            retHome = null;
             List<WebElement> theEle5 = driver.findElements(By.xpath("//h2[text() = 'Expenses']"));
             //.debug("List of Expenses  " + theEle5.size());
             wr.writeRow("Expenses", rolePermission.isExpenses(), theEle5.size(), "");
             findReportElements(rolePermission, "Expenses");
             if (rolePermission.isExpenses()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Expenses Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Expenses Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Expenses");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Expenses section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Expenses section ", e);
+            wr.writeSubRowException("Expenses Dashboard", "Exception ");
         }
 
         try {
+            tdsLink = null;
+            retHome = null;
             List<WebElement> theEle6 = driver.findElements(By.xpath("//h2[text() = 'Lodging']"));
             //log.debug("List of Lodging " + theEle6.size());
             wr.writeRow("Lodging", rolePermission.isLodging(), theEle6.size(), "");
             findReportElements(rolePermission, "Lodging");
             if (rolePermission.isLodging()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Lodging Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Lodging Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Lodging");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Lodging section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Lodging section ", e);
+            wr.writeSubRowException("Lodging Dashboard", "Exception ");
         }
 
         try {
+            tdsLink = null;
+            retHome = null;
             List<WebElement> theEle7 = driver.findElements(By.xpath("//h2[text() = 'Debt Management']"));
-            //log.debug("List of Debt Management " + theEle7.size());
+            //log.debug("List of Lodging " + theEle6.size());
             wr.writeRow("Debt Management", rolePermission.isDebtManagement(), theEle7.size(), "");
             findReportElements(rolePermission, "Debt Management");
             if (rolePermission.isDebtManagement()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Debt Management Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//span[text() = 'Debt Management Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Debt Management");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Debt Management section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Debt Management section ", e);
+            wr.writeSubRowException("Debt Management Dashboard", "Exception ");
         }
 
+
+
         try {
+            tdsLink = null;
+            retHome = null;
             List<WebElement> theEle8 = driver.findElements(By.xpath("//h2[text() = 'Transaction Monitoring']"));
             //log.debug("List of Transaction Monitoring " + theEle8.size());
             wr.writeRow("Transaction Monitoring", rolePermission.isTransactionMonitoring(), theEle8.size(), "");
             findReportElements(rolePermission, "Transaction Monitoring");
             if (rolePermission.isTransactionMonitoring()) {
-                WebElement tdsLink = driver.findElement(By.xpath("//*[text() = 'Transaction Monitoring Dashboard']"));
+                tdsLink = driver.findElement(By.xpath("//*[text() = 'Transaction Monitoring Dashboard']"));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
+                Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
                 findReportListInSection(rolePermission, "Transaction Monitoring");
-                WebElement retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
+                retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Transaction Monitoring section");
             }
         } catch (Exception e) {
             log.error(rolePermission.getUserName() + " " + rolePermission.getRoleName() + " " + "Exception in Transaction Monitoring section " , e);
+            wr.writeSubRowException("Transaction Monitoring Dashboard", "Exception ");
         }
+
+
         wr.closeTable();
 
 
@@ -276,19 +314,21 @@ public class ARoleTest extends TestBaseReports {
         // Logout
         driver.findElement(By.xpath("//*[@id=\'logout\']")).click();
         driver.close();
+        driver.close();
 
         log.debug("===== Complete ARoleTest Rolename -- " + rolePermission.getRoleName());
     }
 
     public void findReportElements(RolePermission rolePermission, String section) {
+        try {
         List<Report> theReportList = reportList.getReportBySection(section);
         for (Report aReport : theReportList) {
 
             String text = aReport.getReportText();
             List<WebElement> theReport = null;
-            if (text.equals("\"What's Out\": Totals by System")) {
+            if (text.equals("What's Out - Totals by System")) {
                 theReport = driver.findElements(By.xpath("//*[contains(text(),'Out') and contains(text(),'Totals by System')]"));
-            } else if (text.equals("\"What's Out\": Details")) {
+            } else if (text.equals("What's Out - Details")) {
                 theReport = driver.findElements(By.xpath("//*[contains(text(),'Out') and contains(text(),'Details')]"));
             } else {
                 theReport = driver.findElements(By.xpath("//li[text() = '" + text + "']"));
@@ -298,48 +338,52 @@ public class ARoleTest extends TestBaseReports {
             log.debug("Report search " + text + " " + theReport.size() + " " + rp);
 
         }
-
+    } catch (Exception e){
+        log.debug("Error in findReportElements " + section , e);
+        throw e;
+    }
+        log.debug("leaving findReportElements " + section);
     }
 
     public void findReportListInSection(RolePermission rolePermission, String section) {
-        if (section.equals("Document Details")) {
-            int i = 0;
-        }
-        List<Report> theReportList = reportList.getReportBySection(section);
-        wr.writeSectionRow(section + " drilldown ");
-        for (Report aReport : theReportList) {
-            String text = aReport.getReportText();
-            String displayText = aReport.getReportDisplayText();
-            List<WebElement> theReports = null;
-            if (text.equals("\"What's Out\": Totals by System")) {
-                theReports = driver.findElements(By.xpath("//*[contains(text(),'Out') and contains(text(),'Totals by System')]"));
-            } else if (text.equals("\"What's Out\": Details")) {
-                theReports = driver.findElements(By.xpath("//*[contains(text(),'Out') and contains(text(),'Details')]"));
-            } else {
-
-                theReports = driver.findElements(By.xpath("//span[contains(text(), '" + displayText + "'  ) ]"));
+        try {
+            if (section.equals("Transaction Monitoring")) {
+                int i = 0;
             }
-            boolean rp = rolePermission.findPermissionByString(text);
+            List<Report> theReportList = reportList.getReportBySection(section);
+            wr.writeSectionRow(section + " drilldown ");
+            for (Report aReport : theReportList) {
+                String text = aReport.getReportText();
+                String displayText = aReport.getReportDisplayText();
+                List<WebElement> theReports = null;
+                if (displayText.equals("Display the What's Out - Totals by System report")) {
+                    theReports = driver.findElements(By.xpath("//span[contains(text(),'Display the What') and contains(text(),'Totals by System')]"));
+                } else if (displayText.equals("Display the What's Out - Transaction Details")) {
+                    theReports = driver.findElements(By.xpath("//span[contains(text(),'Display the What') and contains(text(),'Transaction Details')]"));
+                } else {
+                    theReports = driver.findElements(By.xpath("//span[contains(text(), '" + displayText + "'  ) ]"));
+                }
+                boolean rp = rolePermission.findPermissionByString(text);
 
 
-            wr.writeSubRow(displayText, rp, theReports.size(), "");
+                wr.writeSubRow(displayText, rp, theReports.size(), "");
 
 
+            }
+        } catch (Exception e){
+            log.debug("Error in findReportListInSection " + section , e);
+            throw e;
         }
-        log.debug("leaving Section");
+        log.debug("leaving findReportListInSection " + section);
     }
 
     public void findReportElements(RolePermission rolePermission) {
         for (Report aReport : reportList.getTheReports()) {
             String text = aReport.getReportText();
             List<WebElement> theReport = null;
-            if (text.equals("\"What's Out\": Totals by System")) {
-                theReport = driver.findElements(By.xpath("//*[contains(text(),'Out') and contains(text(),'Totals by System')]"));
-            } else if (text.equals("\"What's Out\": Details")) {
-                theReport = driver.findElements(By.xpath("//*[contains(text(),'Out') and contains(text(),'Details')]"));
-            } else {
-                theReport = driver.findElements(By.xpath("//*[text() = '" + text + "']"));
-            }
+
+            theReport = driver.findElements(By.xpath("//*[text() = '" + text + "']"));
+
             boolean good = rolePermission.findPermissionByString(text);
             log.debug("Report search " + text + " " + theReport.size() + " " + good);
 

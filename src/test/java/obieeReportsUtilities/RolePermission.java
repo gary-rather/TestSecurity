@@ -112,8 +112,8 @@ public class RolePermission {
             case "Debts with Offsets and Collections": value = Debts_with_Offsets_and_Collections;break;
             case "Monthly Debt Summary": value = Monthly_Debt_Summary;break;
 
-            case "\"What's Out\": Totals by System": value = Whats_Out_Totals_by_System;break;
-            case "\"What's Out\": Details": value = Whats_Out_Details;break;
+            case "What's Out - Totals by System": value = Whats_Out_Totals_by_System;break;
+            case "What's Out - Details": value = Whats_Out_Details;break;
             case "Posack Delinquency": value = Posack_Delinquency;break;
             case "Partner System Posack Delinquency": value = Partner_System_Posack_Delinquency;break;
             default : value = false;

@@ -85,6 +85,13 @@ public class WriteResults {
         printWriter.println(rowHtml);
         printWriter.flush();
     }
+    public void writeSubRowException(String name, String notes){
+
+        String color = "#F3E42F";
+        String rowHtml = "<TR bg><TD></TD><TD>" + name + "</TD>"+ "<TD>" +  "</TD>" + "<TD>&nbsp;</TD>"+ "<TD bgcolor='"+ color +"'>" + notes + "</TD></TR>";
+        printWriter.println(rowHtml);
+        printWriter.flush();
+    }
     public void logSql(ArrayList<SqlObject> theSql) {
 
         StringBuffer sb = new StringBuffer();
