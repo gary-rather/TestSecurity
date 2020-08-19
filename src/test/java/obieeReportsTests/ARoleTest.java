@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.sql.*;
@@ -26,11 +27,18 @@ public class ARoleTest extends TestBaseReports {
     WebElement tdsLink = null;
     WebElement retHome = null;
 
+    @BeforeSuite
+    public void runBeforeSuite(){
+        wrtop = new WriteResults("ARoleTest.html", true);
+        wrtop.pageHeader();
+        wrtop.openOverAllTable();
+    }
     @BeforeClass
     public void runBeforeClass() {
         //log.debug("0 ====== Report ARoleTest =======================================");
         super.setTheTest("ARoleTest");
-        wr = new WriteResults("ARoleTest.html", true);
+
+
 
     }
 
@@ -41,15 +49,16 @@ public class ARoleTest extends TestBaseReports {
 
         //setRoleInDB(rolePermission.getRoleName());
 
-
+        String theStatus = "PASS";
         log.debug("===== Enter ARoleTest Rolename -- " + rolePermission.getRoleName());
         runBeforeClass();
 
         super.setUp(rolePermission);
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
         String userName = rolePermission.getUserName().trim();
-
+        WriteResults wr = new WriteResults(userName + ".html",false);
+        wr.pageHeader();
 /*
 		if (!"RTEST11".equals(userName)){
 			log.debug("SKIP " + userName);
@@ -58,28 +67,32 @@ public class ARoleTest extends TestBaseReports {
 			return;
 		}
 */
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         String theTestValue = this.getTheTest();
 
         // Open the table for this loop
+        wrtop.writeRoleResultsA(roleCount,rolePermission);
         wr.openTable(rolePermission.getRoleName(), roleCount++, rolePermission.getUserName());
 
 
         try {
             tdsLink = null;
             retHome = null;
-
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle0 = driver.findElements(By.xpath("//h2[text() = 'Trip & Document Status']"));
             //log.debug("List of Trip & Document Status " + theEle0.size());
             wr.writeRow("Trip & Document Status", rolePermission.isTripDocumentStatus(), theEle0.size(), "");
-            findReportElements(rolePermission, "Trip & Document Status");
+            result0 = findReportElements(rolePermission, "Trip & Document Status", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
             if (rolePermission.isTripDocumentStatus()) {
                 tdsLink = driver.findElement(By.xpath("//*[text() = 'Document & Trip Status Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Trip & Document Status");
+                result1 = findReportListInSection(rolePermission, "Trip & Document Status", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Trip & Document Status section");
@@ -93,10 +106,13 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle1 = driver.findElements(By.xpath("//h2[text() = 'Document Details']"));
             //log.debug("List of Document Details " + theEle1.size());
             wr.writeRow("Document Details", rolePermission.isTripDocumentStatus(), theEle1.size(), "");
-            findReportElements(rolePermission, "Document Details");
+            result0 = findReportElements(rolePermission, "Document Details", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
             if (rolePermission.isTripDocumentStatus()) {
                 tdsLink = driver.findElement(By.xpath("//*[text() = 'Document Details Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
@@ -104,7 +120,8 @@ public class ARoleTest extends TestBaseReports {
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
 
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Document Details");
+                result1 = findReportListInSection(rolePermission, "Document Details", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Document Details section");
@@ -117,11 +134,14 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             String rolename = rolePermission.getRoleName();
             List<WebElement> theEle2 = driver.findElements(By.xpath("//h2[text() = 'Traveler & User Information']"));
             //log.debug("List of Traveler & User Information " + theEle2.size());
             wr.writeRow("Traveler & User Information", rolePermission.isTravelerUserInformation(), theEle2.size(), "");
-            findReportElements(rolePermission, "Traveler & User Information");
+            result0 = findReportElements(rolePermission, "Traveler & User Information", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
 
             // For Trveler and Audit need to check the role
             // BacisB and Adt
@@ -132,7 +152,8 @@ public class ARoleTest extends TestBaseReports {
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Traveler & User Information");
+                result1 = findReportListInSection(rolePermission, "Traveler & User Information", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Traveler & User Information section");
@@ -144,7 +165,8 @@ public class ARoleTest extends TestBaseReports {
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
 
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Traveler & User Information");
+                result1 = findReportListInSection(rolePermission, "Traveler & User Information", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Traveler & User Information section");
@@ -155,7 +177,8 @@ public class ARoleTest extends TestBaseReports {
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Audit Trail");
+                result1 = findReportListInSection(rolePermission, "Audit Trail", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Traveler & User Information section");
@@ -168,17 +191,22 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle3 = driver.findElements(By.xpath("//h2[text() = 'Tickets']"));
             //log.debug("List of Tickets " + theEle3.size());
             wr.writeRow("Tickets", rolePermission.isTickets(), theEle3.size(), "");
-            findReportElements(rolePermission, "Tickets");
+            result0 = findReportElements(rolePermission, "Tickets", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
+
             if (rolePermission.isTickets()) {
                 tdsLink = driver.findElement(By.xpath("//*[text() = 'Tickets Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Tickets");
+                result1 = findReportListInSection(rolePermission, "Tickets", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Tickets section");
@@ -191,17 +219,22 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle4 = driver.findElements(By.xpath("//h2[text() = 'Military Information']"));
             //log.debug("List of Military Information " + theEle4.size());
             wr.writeRow("Military Information", rolePermission.isMilitaryInformation(), theEle4.size(), "");
-            findReportElements(rolePermission, "Military Information");
+            result0 = findReportElements(rolePermission, "Military Information", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
+
             if (rolePermission.isMilitaryInformation()) {
                 tdsLink = driver.findElement(By.xpath("//*[text() = 'Military Information Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Military Information");
+                result1 = findReportListInSection(rolePermission, "Military Information", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Military Information section");
@@ -214,17 +247,22 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle5 = driver.findElements(By.xpath("//h2[text() = 'Expenses']"));
             //.debug("List of Expenses  " + theEle5.size());
             wr.writeRow("Expenses", rolePermission.isExpenses(), theEle5.size(), "");
-            findReportElements(rolePermission, "Expenses");
+            result0 = findReportElements(rolePermission, "Expenses", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
+
             if (rolePermission.isExpenses()) {
                 tdsLink = driver.findElement(By.xpath("//*[text() = 'Expenses Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Expenses");
+                result1 = findReportListInSection(rolePermission, "Expenses", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Expenses section");
@@ -237,17 +275,22 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle6 = driver.findElements(By.xpath("//h2[text() = 'Lodging']"));
             //log.debug("List of Lodging " + theEle6.size());
             wr.writeRow("Lodging", rolePermission.isLodging(), theEle6.size(), "");
-            findReportElements(rolePermission, "Lodging");
+            result0 = findReportElements(rolePermission, "Lodging", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
+
             if (rolePermission.isLodging()) {
                 tdsLink = driver.findElement(By.xpath("//*[text() = 'Lodging Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Lodging");
+                result1 = findReportListInSection(rolePermission, "Lodging", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Lodging section");
@@ -260,17 +303,22 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle7 = driver.findElements(By.xpath("//h2[text() = 'Debt Management']"));
             //log.debug("List of Lodging " + theEle6.size());
             wr.writeRow("Debt Management", rolePermission.isDebtManagement(), theEle7.size(), "");
-            findReportElements(rolePermission, "Debt Management");
+            result0 = findReportElements(rolePermission, "Debt Management", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
+
             if (rolePermission.isDebtManagement()) {
                 tdsLink = driver.findElement(By.xpath("//span[text() = 'Debt Management Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Debt Management");
+                result1 = findReportListInSection(rolePermission, "Debt Management", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Debt Management section");
@@ -285,17 +333,22 @@ public class ARoleTest extends TestBaseReports {
         try {
             tdsLink = null;
             retHome = null;
+            String result0 = "";
+            String result1 = "";
             List<WebElement> theEle8 = driver.findElements(By.xpath("//h2[text() = 'Transaction Monitoring']"));
             //log.debug("List of Transaction Monitoring " + theEle8.size());
             wr.writeRow("Transaction Monitoring", rolePermission.isTransactionMonitoring(), theEle8.size(), "");
-            findReportElements(rolePermission, "Transaction Monitoring");
+            result0 = findReportElements(rolePermission, "Transaction Monitoring", wr);
+            if ("FAIL".equals(result0)) theStatus = "FAIL";
+
             if (rolePermission.isTransactionMonitoring()) {
                 tdsLink = driver.findElement(By.xpath("//*[text() = 'Transaction Monitoring Dashboard']"));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tdsLink);
                 Thread.sleep(500);
                 log.debug("There are tdsLink " + tdsLink.getTagName() + " " + tdsLink.getText());
                 tdsLink.click();
-                findReportListInSection(rolePermission, "Transaction Monitoring");
+                result1 = findReportListInSection(rolePermission, "Transaction Monitoring", wr);
+                if ("FAIL".equals(result1)) theStatus = "FAIL";
                 retHome = driver.findElement(By.xpath("//*[text() = 'Return to Defense Travel Reports Home']"));
                 retHome.click();
                 log.debug("finished Transaction Monitoring section");
@@ -305,7 +358,7 @@ public class ARoleTest extends TestBaseReports {
             wr.writeSubRowException("Transaction Monitoring Dashboard", "Exception ");
         }
 
-
+        wrtop.writeRoleResultsB(theStatus,rolePermission);
         wr.closeTable();
 
 
@@ -319,7 +372,9 @@ public class ARoleTest extends TestBaseReports {
         log.debug("===== Complete ARoleTest Rolename -- " + rolePermission.getRoleName());
     }
 
-    public void findReportElements(RolePermission rolePermission, String section) {
+    public String findReportElements(RolePermission rolePermission, String section, WriteResults wr) {
+        driver.manage().timeouts().implicitlyWait(100, TimeUnit.MILLISECONDS);
+        String theResult = "";
         try {
         List<Report> theReportList = reportList.getReportBySection(section);
         for (Report aReport : theReportList) {
@@ -334,7 +389,8 @@ public class ARoleTest extends TestBaseReports {
                 theReport = driver.findElements(By.xpath("//li[text() = '" + text + "']"));
             }
             boolean rp = rolePermission.findPermissionByString(text);
-            wr.writeSubRow(text, rp, theReport.size(), "");
+            String result = wr.writeSubRow(text, rp, theReport.size(), "");
+            if ("FAIL".equals(result)) theResult = "FAIL";
             log.debug("Report search " + text + " " + theReport.size() + " " + rp);
 
         }
@@ -343,13 +399,14 @@ public class ARoleTest extends TestBaseReports {
         throw e;
     }
         log.debug("leaving findReportElements " + section);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        return theResult;
     }
 
-    public void findReportListInSection(RolePermission rolePermission, String section) {
+    public String findReportListInSection(RolePermission rolePermission, String section, WriteResults wr) {
+        String result = "";
         try {
-            if (section.equals("Transaction Monitoring")) {
-                int i = 0;
-            }
+            driver.manage().timeouts().implicitlyWait(100, TimeUnit.MILLISECONDS);
             List<Report> theReportList = reportList.getReportBySection(section);
             wr.writeSectionRow(section + " drilldown ");
             for (Report aReport : theReportList) {
@@ -366,7 +423,7 @@ public class ARoleTest extends TestBaseReports {
                 boolean rp = rolePermission.findPermissionByString(text);
 
 
-                wr.writeSubRow(displayText, rp, theReports.size(), "");
+                result = wr.writeSubRow(displayText, rp, theReports.size(), "");
 
 
             }
@@ -375,6 +432,8 @@ public class ARoleTest extends TestBaseReports {
             throw e;
         }
         log.debug("leaving findReportListInSection " + section);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        return result;
     }
 
     public void findReportElements(RolePermission rolePermission) {

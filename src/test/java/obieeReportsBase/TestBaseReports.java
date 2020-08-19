@@ -40,7 +40,8 @@ public class TestBaseReports {
 	public static WebDriverWait wait;
 
 	public String theTest = null;
-	public WriteResults wr = null;
+
+	public WriteResults wrtop = null;
 	public int roleCount = 1;
     public ReportList reportList = new ReportList();
 
@@ -60,8 +61,8 @@ public class TestBaseReports {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		wr = new WriteResults("ARoleTest.html", false);
-		wr.pageHeader();
+		wrtop = new WriteResults("ARoleTest.html", false);
+		wrtop.pageHeader();
 
 
 		log.debug("TestBaseReports resources() exit ");

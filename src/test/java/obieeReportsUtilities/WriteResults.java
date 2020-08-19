@@ -1,6 +1,9 @@
 package obieeReportsUtilities;
 
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -39,7 +42,34 @@ public class WriteResults {
         printWriter.println(sb.toString());
 
     }
+    public void writeRoleResultsB( String overall,RolePermission rolePermission ) {
+        String color = "#00FF00";
+        if (overall.equals("FAIL")) {
+            color = "#FF0000";
+        }
+        String rowHtml = "<TD  bgcolor='"+ color +"'>" + overall + "</TD></TR>";
+        printWriter.println(rowHtml);
+        printWriter.flush();
+    }
 
+    public void writeRoleResultsA(int count , RolePermission rolePermission ){
+
+        ZonedDateTime currentDateTime = ZonedDateTime.now();
+
+        DateTimeFormatter format1 = DateTimeFormatter.ofPattern("yyyy-MMM-dd HH:mm:ss z");
+        String formatDateTime = currentDateTime.format(format1);
+
+
+        String userName = rolePermission.userName;
+        String roleName = rolePermission.getRoleName();
+
+        String name = roleName + " -- " + userName;
+
+
+        String rowHtml = "<TR><TD>"+ count +"</TD><TD>" + formatDateTime + "</TD><TD>" + name + "</TD>"  + "<TD> <a target='results' href=\""+ userName +".html\">" + userName + " Results</a> </TD>" ;
+        printWriter.println(rowHtml);
+        printWriter.flush();
+    }
     public void writeRow(String name,boolean visible, int actual, String notes){
         int expectedCount = 0;
         String result = "";
@@ -67,7 +97,7 @@ public class WriteResults {
         printWriter.println(rowHtml);
         printWriter.flush();
     }
-    public void writeSubRow(String name,boolean visible, int actual, String notes){
+    public String writeSubRow(String name,boolean visible, int actual, String notes){
         int expectedCount = 0;
         String result = "";
         String color = "#00FF00";
@@ -84,6 +114,7 @@ public class WriteResults {
         String rowHtml = "<TR><TD></TD><TD>" + name + "</TD>"+ "<TD>" + visible + "</TD>" + "<TD  bgcolor='"+ color +"'>" + result + "</TD>"+ "<TD>" + notes + "</TD></TR>";
         printWriter.println(rowHtml);
         printWriter.flush();
+        return result;
     }
     public void writeSubRowException(String name, String notes){
 
@@ -133,6 +164,19 @@ public class WriteResults {
         printWriter.println("<div id=\"divyellow\">" + text + "</div>");
     }
 
+    public void openOverAllTable() {
+        String tableHtml = "<table id=\"tbl\">\n" +
+                "  <tr>\n" +
+                "\t<th width='50' >"+"Number " +"</th><th> Timestamp </th>\n" +
+                "</th><th> Role  --  UserName </th>\n" +
+                "    <th width='300' >Link</th>\n" +
+
+                "    <th width='100'>Status</th>\n" +
+                "  </tr>";
+        printWriter.println(tableHtml);
+        printWriter.flush();
+
+    }
     public void openTable(String role, int roleCount,String userName) {
        String tableHtml = "<table id=\"tbl\">\n" +
                "  <tr>\n" +
